@@ -6,6 +6,7 @@ interface WordPopupProps {
   x: number;
   y: number;
   entry: DictionaryEntry[] | null;
+  audioUrl: string | null;
   loading: boolean;
   error: string | null;
   isInFlashcards: boolean;
@@ -19,6 +20,7 @@ export function WordPopup({
   x,
   y,
   entry,
+  audioUrl,
   loading,
   error,
   isInFlashcards,
@@ -47,6 +49,13 @@ export function WordPopup({
       document.removeEventListener('keydown', handleKey);
     };
   }, [onClose]);
+
+  // Auto-play audio when popup opens with an audio URL
+  useEffect(() => {
+    if (audioUrl) {
+      new Audio(audioUrl).play().catch(() => {});
+    }
+  }, [audioUrl]);
 
   // Desktop positioning: keep popup within viewport
   let left = 0;
@@ -86,6 +95,12 @@ export function WordPopup({
     }
   }
 
+  function handlePlayAudio() {
+    if (audioUrl) {
+      new Audio(audioUrl).play().catch(() => {});
+    }
+  }
+
   return (
     <div
       ref={ref}
@@ -100,8 +115,20 @@ export function WordPopup({
       <div className="bg-indigo-600 px-4 py-3 flex items-start justify-between">
         <div>
           <h3 className="text-white font-bold text-lg leading-tight">{word}</h3>
-          {phonetic && (
-            <p className="text-indigo-200 text-sm mt-0.5">{phonetic}</p>
+          {(phonetic || audioUrl) && (
+            <div className="flex items-center gap-2 mt-0.5">
+              {phonetic && (
+                <p className="text-indigo-200 text-sm">{phonetic}</p>
+              )}
+              <button
+                onClick={handlePlayAudio}
+                disabled={!audioUrl}
+                className="text-indigo-200 hover:text-white disabled:opacity-40 disabled:cursor-not-allowed w-6 h-6 flex items-center justify-center rounded-full hover:bg-indigo-500 transition-colors text-base leading-none"
+                title="Play pronunciation"
+              >
+                🔊
+              </button>
+            </div>
           )}
         </div>
         <button

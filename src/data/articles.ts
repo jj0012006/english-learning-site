@@ -5,229 +5,257 @@ export const articles: Article[] = [
     id: 'a1',
     title: 'The Surprising Intelligence of Crows',
     source: 'National Geographic',
-    level: 'Intermediate',
+    level: 'B2',
     readTime: '5 min read',
     dateAdded: '2024-01-01',
     tags: ['science', 'nature', 'animals'],
     excerpt: 'New research reveals that crows possess remarkable cognitive abilities, challenging our understanding of animal intelligence.',
-    text: `Crows have long been regarded as clever birds, but recent scientific studies have elevated our understanding of just how sophisticated their intelligence truly is. Researchers at the University of Cambridge discovered that crows can not only use tools but also manufacture them with a degree of precision that rivals young human children.
+    text: `Crows are very intelligent birds. Scientists have studied them for many years. In recent tests, crows were able to use tools to get food. They could also make tools from wire. This surprised many researchers.
 
-In a series of remarkable experiments, New Caledonian crows were observed bending wire into hooks to retrieve food from containers — a feat that requires planning, spatial reasoning, and an understanding of cause and effect. What is particularly astonishing is that these birds accomplished this task without any prior training or observation of similar behavior.
+Scientists tested New Caledonian crows in a lab. The birds bent wire into hooks to pull food from containers. They did this without any training. They figured it out on their own.
 
-The neural architecture underlying this intelligence is equally surprising. Despite lacking a neocortex — the brain region associated with higher cognition in mammals — crows possess a densely packed pallium that performs analogous functions. This discovery has prompted neuroscientists to reconsider the relationship between brain structure and intelligence.
+What makes this even more interesting is how crows learn from each other. Young crows watch older crows and copy their behavior. This kind of social learning was once thought to only happen in humans and great apes.
 
-Social learning plays a crucial role in crow cognition as well. Young crows observe experienced individuals and adapt their techniques, demonstrating a form of cultural transmission that was once thought exclusive to humans and great apes. In urban environments, crows have been documented using traffic to crack nuts, placing them on crosswalks and waiting for vehicles to do the work.
+Crows also have very good memories. They can remember where they hid food. They seem to know not just where they stored something, but when they stored it. Scientists call this episodic memory. They once thought only humans had it.
 
-Perhaps most remarkable is evidence of episodic-like memory. Crows appear to remember not just what food is stored, but where and when — a cognitive feat once considered the exclusive domain of humans. As we continue to probe the depths of avian intelligence, crows are rewriting the boundaries of what we consider possible in non-human minds.`,
+In cities, crows have learned clever tricks to get food. Some drop hard nuts on roads so cars will crack them open. Then they wait for the traffic light to turn red before collecting the pieces. This shows that crows can plan ahead and solve problems.
+
+Crow brains are quite different from human brains. They do not have a neocortex like humans do. But they have another brain region that works in a similar way. This shows that intelligence can develop in many different forms.
+
+Scientists now believe that crows are among the smartest animals on Earth. Their behavior challenges our ideas about what it means to be intelligent.`,
   },
   {
     id: 'a2',
     title: 'How Music Shapes the Brain',
     source: 'Scientific American',
-    level: 'Intermediate',
+    level: 'B2',
     readTime: '6 min read',
     dateAdded: '2024-01-02',
     tags: ['science', 'neuroscience', 'music'],
     excerpt: 'Learning a musical instrument creates lasting changes in brain structure, improving memory, language, and emotional processing.',
-    text: `When a child learns to play the piano, something remarkable happens inside their skull. The brain begins to reorganize itself, forging new neural pathways and strengthening existing ones in ways that extend far beyond music itself. Decades of neuroscientific research have revealed that musical training is among the most powerful cognitive exercises available to humans.
+    text: `Learning to play music does more than teach you songs. It actually changes your brain. Scientists have found that musicians have different brains from non-musicians. These changes can help in many areas of life.
 
-Brain imaging studies have consistently shown that musicians possess a larger corpus callosum — the bundle of nerve fibers connecting the brain's two hemispheres. This enhanced connectivity allows for faster and more efficient communication between different brain regions, contributing to superior performance on tasks involving spatial reasoning, mathematics, and verbal memory.
+When you learn an instrument, your brain creates new connections. Studies show that musicians have a larger area connecting the two sides of the brain. This helps them think faster and more clearly. It also improves skills in math and reading.
 
-The auditory cortex in trained musicians is measurably larger and more efficiently organized than in non-musicians. This adaptation allows musicians to detect subtle differences in tone, rhythm, and timbre that most people would miss entirely. Interestingly, these enhanced auditory processing skills transfer to language comprehension, helping musicians better distinguish speech sounds in noisy environments.
+The part of the brain that processes sound also gets stronger in musicians. This helps them hear small differences in tone and rhythm. It also helps them understand speech better, even in noisy places.
 
-Emotional regulation is another domain where musical training leaves its mark. Learning to interpret and express emotion through music appears to refine the neural circuits governing emotional processing. Studies of older adults have found that those with musical training demonstrate greater resilience against age-related cognitive decline, suggesting that music builds a form of cognitive reserve.
+Learning music also helps with emotions. Playing an instrument teaches you to express feelings through sound. This seems to make the brain better at handling emotions in daily life. Older musicians tend to stay mentally sharp for longer than non-musicians.
 
-Even passive music listening activates multiple brain networks simultaneously, engaging regions associated with movement, emotion, memory, and reward. For musicians, this activation is even more extensive. The discipline required to master an instrument — years of focused practice and incremental improvement — also cultivates executive function skills that benefit every area of life.`,
+Even just listening to music uses many parts of the brain at once. For musicians, this effect is even stronger. When they hear music, they also activate the brain areas linked to movement, as if they are playing along in their head.
+
+Playing an instrument also requires a lot of practice and focus. This discipline helps build concentration skills that are useful in school, work, and everyday life.
+
+The good news is that you can start learning at any age. Research shows that the brain benefits from music at any point in life. Even a few months of practice can make a real difference.`,
   },
   {
     id: 'a3',
     title: 'The Renaissance of Ancient Languages',
     source: 'The Atlantic',
-    level: 'Advanced',
+    level: 'B2',
     readTime: '7 min read',
     dateAdded: '2024-01-03',
     tags: ['culture', 'language', 'history'],
     excerpt: 'Endangered and extinct languages are being revived through technology and community efforts, preserving irreplaceable cultural knowledge.',
-    text: `Languages do not merely convey information; they encode entire worldviews. When a language dies, humanity loses not just words but unique conceptual frameworks, ecological knowledge, and cultural memory accumulated over millennia. This is why the global movement to revitalize endangered and even extinct languages has taken on the urgency of a conservation effort.
+    text: `Languages are more than just words. They carry the history and culture of a people. When a language disappears, a whole way of seeing the world is lost. That is why many communities are working hard to bring back their languages.
 
-Welsh stands as perhaps the most celebrated revival success story. Once declining rapidly under English linguistic hegemony, Welsh now boasts over 700,000 speakers, supported by Welsh-language television, mandatory education, and official government status. The revival demonstrates that concerted community effort, backed by institutional support, can reverse even severe language decline.
+Welsh is a great example of a language saved from the edge of disappearing. In the past, fewer and fewer people spoke Welsh. But today, more than 700,000 people speak it. This happened because of schools, Welsh-language television, and strong government support.
 
-The case of Hawaiian is equally instructive. By the 1980s, fewer than 50 children spoke Hawaiian natively. Through immersive language nests — where toddlers are taught entirely in Hawaiian — and university programs, the number has grown to several thousand native speakers. Technology has accelerated this recovery, with apps, social media content, and digital archives making the language accessible to diaspora communities worldwide.
+Hawaiian also had a very difficult period. By the 1980s, only a small number of children grew up speaking it. People worked hard to change this. They created schools where children learned everything in Hawaiian. Today, thousands of children speak Hawaiian as their first language.
 
-More dramatic still is the reconstruction of Cornish, a Celtic language that had no native speakers by the 18th century. Linguists and enthusiasts reconstructed it from historical texts, and today hundreds of people speak it, with children again growing up as native Cornish speakers. Critics question whether such reconstructed languages retain authentic cultural continuity, but proponents argue that the community and identity they foster are genuine regardless.
+Cornish is an even more dramatic story. This Celtic language had no native speakers by the 1700s. But enthusiasts and language experts brought it back using old texts and records. Today, hundreds of people speak Cornish, and some children are growing up with it.
 
-The implications extend beyond sentimentality. Linguists estimate that many indigenous languages contain sophisticated pharmacological and ecological knowledge embedded in their vocabularies — plant names that encode medicinal properties, landscape terms that describe subtle environmental features with no equivalent in dominant languages. As climate change transforms ecosystems globally, this accumulated knowledge may prove invaluable.`,
+Technology has helped these efforts a lot. Language apps, websites, and social media make it easier for people to learn and practice endangered languages. People who live far from their home communities can also stay connected to their language.
+
+Languages are also important for practical reasons. Many indigenous languages contain unique knowledge about plants, animals, and the environment. This information often does not exist in other languages. As the natural world changes, this knowledge may become very valuable.`,
   },
   {
     id: 'a4',
     title: 'The Hidden Economy of Deep-Sea Mining',
     source: 'The Economist',
-    level: 'Advanced',
+    level: 'B2',
     readTime: '6 min read',
     dateAdded: '2024-01-04',
     tags: ['technology', 'environment', 'economics'],
     excerpt: 'As demand for battery metals surges, corporations are racing to mine the ocean floor — but at what ecological cost?',
-    text: `Three miles beneath the Pacific Ocean's surface lie fields of potato-sized rocks called polymetallic nodules, scattered across the abyssal plain like geological confetti. These formations, millions of years in the making, are extraordinarily rich in cobalt, nickel, manganese, and copper — precisely the metals required for electric vehicle batteries and renewable energy infrastructure. The race to extract them has begun.
+    text: `At the bottom of the ocean, far below the surface, there are millions of rocks. These are not ordinary rocks. They contain metals like cobalt, nickel, and copper. These metals are used to make batteries for electric cars and other technology. Companies are now planning to mine them.
 
-The Clarion-Clipperton Zone, a vast expanse of seafloor between Hawaii and Mexico, contains an estimated 21 billion tons of nodules. Several nations have already secured exploration licenses from the International Seabed Authority, the UN body regulating international waters. The commercial logic is compelling: terrestrial deposits of these metals are increasingly difficult and costly to mine, while political instability in key producing countries creates supply chain vulnerabilities.
+The area between Hawaii and Mexico is especially rich in these mineral rocks. Several countries have already received permission to explore this part of the ocean floor. Mining companies say this could solve a big problem. The same metals are getting harder to find on land.
 
-Yet the ecological concerns are profound. The deep sea, though seemingly barren, supports extraordinary biodiversity. Organisms living on and around nodule fields — including rare sponges, sea cucumbers, and microbial communities — have evolved over geological timescales in conditions of extraordinary stability. Mining operations would not merely remove nodules but create vast sediment plumes that could smother life across hundreds of square kilometers.
+But scientists have serious concerns about deep-sea mining. Although the ocean floor looks empty, it is actually home to many living things. Rare sponges, sea cucumbers, and other creatures live there. They have adapted slowly over millions of years. Mining would destroy their habitat and create large clouds of sediment spreading for kilometers.
 
-Recovery timescales add another dimension of concern. Areas disturbed by experimental mining in the 1970s show minimal biological recovery decades later. Some scientists argue that deep-sea ecosystems are essentially non-renewable on human timescales. The carbon stored in abyssal sediments, if disturbed, could also accelerate climate change — the very problem that battery metals are meant to address.
+The damage would also last a very long time. Scientists tested small areas of the ocean floor in the 1970s. Even today, those areas have not recovered. Once destroyed, deep-sea ecosystems may not recover for thousands of years.
 
-The paradox at the heart of the deep-sea mining debate is acute: technologies designed to reduce environmental damage on land may require creating new environmental damage in the ocean. How humanity resolves this tension will reveal much about our capacity for long-term ecological thinking in an era of urgent technological transition.`,
+There is a difficult problem at the heart of this debate. The metals needed for clean energy technology may require damaging the ocean to get them. Clean energy on land could mean dirty destruction under the sea.
+
+As demand for electric cars and renewable energy grows, pressure to mine the deep sea will increase. How we handle this challenge will show how well we can plan for the future.`,
   },
   {
     id: 'a5',
     title: 'Why We Dream: New Theories from Neuroscience',
     source: 'New Scientist',
-    level: 'Intermediate',
+    level: 'B2',
     readTime: '5 min read',
     dateAdded: '2024-01-05',
     tags: ['science', 'neuroscience', 'psychology'],
     excerpt: 'Modern neuroscience is finally unraveling the mystery of dreams, revealing their role in memory consolidation and emotional processing.',
-    text: `For most of human history, dreams were considered messages from the divine. Today, neuroscientists armed with sophisticated brain imaging technology are piecing together a more mundane but equally fascinating explanation: dreams are the brain's nightly maintenance routine, essential for memory consolidation, emotional processing, and creative problem-solving.
+    text: `For thousands of years, people have wondered why we dream. Ancient cultures thought dreams were messages from gods. Today, scientists have a different answer. They believe dreams help our brains work better.
 
-During REM sleep — the stage most associated with vivid dreaming — the hippocampus, which handles short-term memory, communicates intensively with the neocortex, which stores long-term memories. This dialogue appears to selectively consolidate memories from the day, transferring important experiences into long-term storage while pruning less significant information. Students who sleep between study sessions consistently outperform those who study without sleep, and disrupting REM sleep specifically impairs this consolidation.
+During sleep, the brain is very active. It is not just resting. One important stage of sleep is called REM sleep. This is when most dreaming happens. During this stage, the brain works on memories from the day. It decides which ones to keep and which ones to let go.
 
-The emotional dimension of dreaming has attracted significant research attention. The amygdala, the brain's emotional processing center, is highly active during REM sleep, but the prefrontal cortex — responsible for rational modulation of emotion — is suppressed. This combination may allow the brain to reprocess emotionally charged memories without the full physiological stress response, essentially allowing us to review threatening or traumatic experiences in a safer neurological context.
+This process is called memory consolidation. Studies show that sleep helps us remember what we learned. Students who sleep between study sessions remember more than those who do not. This shows that sleep is an important part of learning.
 
-Some researchers propose the "threat simulation theory" — that dreaming evolved as a rehearsal mechanism, allowing organisms to practice responses to dangerous situations without real-world risk. The prevalence of chase dreams and social conflict scenarios across cultures supports this hypothesis. Others suggest that dreams serve a creativity function, allowing the brain to form novel associations between disparate memories that would be suppressed by rational thought during waking hours.
+Dreams may also help us deal with emotions. During REM sleep, the emotional part of the brain is very active. But the rational part, which controls how we react, is less active. This may allow the brain to process difficult feelings in a safer way. Some scientists think this is why we often dream about things that worry us.
 
-The neurological correlates of lucid dreaming — where the dreamer is aware they are dreaming — have provided unique insights. Lucid dreamers show reactivation of the prefrontal cortex, suggesting that self-awareness during dreams is neurologically distinct from ordinary dreaming and may offer therapeutic potential for nightmare disorders.`,
+Another theory suggests that dreams help us practice for difficult situations. Many dreams involve being chased or dealing with social conflicts. This could be the brain's way of preparing for challenges in real life.
+
+Lucid dreaming, where you know you are dreaming, has also interested scientists. When people have lucid dreams, the part of the brain connected to self-awareness becomes active again. This finding could one day help people who suffer from nightmares.`,
   },
   {
     id: 'a6',
     title: 'The Architecture of Resilient Cities',
     source: 'Architectural Digest',
-    level: 'Intermediate',
+    level: 'B2',
     readTime: '6 min read',
     dateAdded: '2024-01-06',
     tags: ['technology', 'environment', 'urban'],
     excerpt: 'Cities around the world are redesigning themselves to withstand climate change, floods, and extreme heat through innovative urban planning.',
-    text: `Rotterdam sits largely below sea level, protected from the North Sea by an elaborate system of dikes and storm surge barriers. Yet rather than merely defending against water, this Dutch city has chosen to embrace it. Across Rotterdam's urban landscape, plazas transform into holding basins during storms, parking garages double as water storage facilities, and rooftop gardens absorb rainfall that would otherwise overwhelm drainage systems. Rotterdam has become the world's foremost laboratory for climate-adaptive urban design.
+    text: `Cities around the world are facing a big challenge. Climate change is bringing more floods, heat waves, and storms. City planners are now designing cities that can handle these problems better. Some cities have already made impressive changes.
 
-The philosophy driving Rotterdam's transformation — working with natural systems rather than against them — is gaining traction in cities across the globe. Singapore has converted former industrial canals into a network of naturalized waterways called ABC Waters, which manage stormwater while creating biodiversity corridors through the city. Melbourne has planted 70,000 additional trees since 2012 specifically to combat urban heat island effects, reducing street-level temperatures by several degrees.
+Rotterdam in the Netherlands is one of the best examples. Much of the city sits below sea level. Instead of just building walls to keep out water, Rotterdam found creative solutions. Some public squares can fill with water during heavy rain. Parking garages store extra water. Rooftops are covered with plants that absorb rainfall.
 
-Heat is emerging as perhaps the most pressing challenge for 21st-century cities. Urban environments are measurably hotter than surrounding rural areas due to the heat-absorbing properties of concrete and asphalt combined with waste heat from human activity. As global temperatures rise, this urban heat island effect could render some cities lethally hot during summer. Architects are responding with cool roofs coated in reflective materials, urban wind corridors preserved through building placement regulations, and mandatory green space ratios in new developments.
+The main idea is to work with nature, not against it. Singapore has turned old industrial canals into natural waterways. These help manage rainwater and also create habitats for wildlife. Melbourne in Australia has planted thousands of extra trees to reduce city heat. Shade from trees can lower street temperatures by several degrees.
 
-Sponge cities represent another emerging paradigm. Chinese urban planners have pioneered this approach, designing cities that absorb, store, and gradually release water like natural ecosystems. By replacing impermeable surfaces with permeable pavements, restoring wetlands at city edges, and creating green infrastructure networks, sponge cities reduce flood risk while replenishing groundwater supplies.
+Heat is becoming a serious problem for many cities. Urban areas are hotter than surrounding countryside because roads and buildings absorb heat. As global temperatures rise, this could become dangerous. Architects are responding with reflective rooftop materials and more parks and green spaces.
 
-The common thread linking these innovations is a recognition that urban resilience cannot be achieved through engineering alone. The most adaptive cities are those that integrate ecological function into their built fabric, creating systems that respond dynamically to changing conditions rather than rigidly resisting them.`,
+China has developed the idea of "sponge cities." These cities are designed to absorb water like a sponge. Permeable roads and restored wetlands help prevent flooding and refill underground water supplies.
+
+All these approaches share one idea. Cities need to work with natural systems. The most successful cities are those that adapt to changing conditions rather than simply fighting against them.`,
   },
   {
     id: 'a7',
     title: 'Fermented Foods and the Gut Microbiome',
     source: 'Harvard Health Publishing',
-    level: 'Intermediate',
+    level: 'B1',
     readTime: '5 min read',
     dateAdded: '2024-01-07',
     tags: ['health', 'science', 'food'],
     excerpt: 'Research shows that fermented foods dramatically increase microbiome diversity, with wide-ranging benefits for immunity and mental health.',
-    text: `The human gut contains approximately 38 trillion microorganisms — roughly equal to the number of human cells in the body. This vast community of bacteria, fungi, and viruses, collectively known as the microbiome, has emerged as one of the most important frontiers in medical science. And a humble jar of kimchi or a bowl of yogurt may be among the most potent tools we have for cultivating its health.
+    text: `Your gut contains trillions of tiny living things called bacteria. Most of them are helpful. Together, they are called the microbiome. Scientists have discovered that a healthy microbiome is very important for your overall health.
 
-A landmark Stanford University study published in Cell demonstrated that consuming fermented foods — kimchi, kefir, kombucha, sauerkraut, and yogurt — significantly increased microbiome diversity while reducing markers of inflammation. Participants who ate high quantities of fermented foods showed elevated levels of 19 different inflammatory proteins and increased populations of beneficial bacterial species. The effect was consistent across participants, suggesting a robust causal relationship rather than mere correlation.
+One of the best ways to improve your microbiome is to eat fermented foods. These are foods that have been changed by bacteria or yeast. Common examples include yogurt, kimchi, sauerkraut, kefir, and kombucha. People have been eating these foods for thousands of years.
 
-The mechanisms behind these benefits are becoming clearer. During fermentation, bacteria and yeasts break down sugars and starches, producing lactic acid and a range of other compounds that create an inhospitable environment for pathogens while nourishing beneficial microorganisms. Many fermented foods also contain live cultures that can temporarily colonize the gut, potentially influencing the resident microbial community.
+A study at Stanford University showed that people who ate more fermented foods had more variety in their gut bacteria. More variety is better for health. The study also found that fermented foods reduced inflammation in the body. Inflammation is connected to many health problems.
 
-The implications extend surprisingly far. The gut-brain axis — a bidirectional communication network between the enteric nervous system in the gut and the central nervous system — means that microbiome health directly influences mood, cognition, and stress response. Approximately 90% of the body's serotonin is produced in the gut, and disruptions to the microbiome have been linked to depression and anxiety disorders. Clinical trials are now exploring probiotic supplementation as an adjunct treatment for mental health conditions.
+Fermented foods work in two ways. First, the fermentation process creates helpful compounds. These protect the gut and help good bacteria grow. Second, many fermented foods contain live bacteria. These bacteria can enter your gut and improve the microbiome directly.
 
-Incorporating fermented foods into daily diet requires minimal culinary expertise. Many traditional cuisines around the world already feature these foods prominently, offering both health benefits and cultural connection to food traditions that predate modern nutrition science by thousands of years.`,
+The connection between your gut and your brain is also important. Your gut sends signals to your brain through a network of nerves. Research shows that an unhealthy microbiome can affect your mood and thinking. Some studies even link gut bacteria to depression and anxiety.
+
+The good news is that adding fermented foods to your diet is easy. You do not need to cook anything special. A small portion of yogurt or kimchi each day can make a real difference. Many cultures around the world already eat these foods as part of their normal diet.`,
   },
   {
     id: 'a8',
     title: 'The Philosophy of Artificial Consciousness',
     source: 'Aeon Magazine',
-    level: 'Advanced',
+    level: 'B2',
     readTime: '8 min read',
     dateAdded: '2024-01-08',
     tags: ['technology', 'philosophy', 'AI'],
     excerpt: 'As AI systems grow more sophisticated, philosophers and scientists grapple with the hardest question: can machines ever truly be conscious?',
-    text: `When a large language model reports that it "finds" a problem interesting or "feels" uncertain about an answer, what exactly is happening? Is this merely sophisticated pattern matching that mimics the surface form of human introspection? Or might something genuinely experiential be occurring in the computational substrate? These questions, once confined to philosophy seminars, have acquired sudden practical urgency as artificial systems exhibit increasingly complex behavior.
+    text: `Can a machine be conscious? This is one of the most interesting questions in science and philosophy today. As artificial intelligence becomes more advanced, this question is becoming more urgent.
 
-The hard problem of consciousness — explaining why physical processes give rise to subjective experience at all — remains philosophy's most intractable puzzle. David Chalmers, who coined the term, argued that no amount of information about neural firing patterns logically entails the existence of the subjective "what it is like" to experience redness, pain, or joy. If this explanatory gap is genuine, it creates a significant obstacle to determining whether any system, biological or artificial, is conscious.
+When an AI system says it finds something interesting, is it really feeling something? Or is it just copying the way humans speak? Right now, we do not know the answer. This uncertainty makes many scientists and philosophers uncomfortable.
 
-Integrated Information Theory, developed by neuroscientist Giulio Tononi, attempts to make consciousness measurable. The theory proposes that consciousness corresponds to integrated information — a property called phi — that cannot be reduced to the sum of a system's parts. Proponents argue that this framework applies equally to biological and artificial systems. Critics counter that it would implausibly attribute consciousness to certain simple computational structures while excluding others that seem intuitively more likely to be conscious.
+The main problem is called the "hard problem of consciousness." We can study the brain and understand how it works. But we still cannot explain why there is a feeling of experience. Why does it feel like something to see the color red or to feel pain? No one fully knows.
 
-Global Workspace Theory offers a different approach, locating consciousness in the functional integration of information across specialized brain modules. On this view, a system is conscious when it maintains a "global workspace" that makes information broadly available across its processing systems. Some researchers argue that sufficiently sophisticated neural networks might instantiate this functional architecture, making consciousness a matter of degree rather than kind.
+One theory about consciousness is called Integrated Information Theory. It says that consciousness happens when information in a system is connected in a certain way. If this theory is correct, then some AI systems might be conscious. But many scientists disagree with this idea.
 
-Perhaps most disturbing is the epistemic problem: we cannot directly verify the subjective experience of any system other than ourselves. We infer the consciousness of other humans through behavioral evidence and reasoning from analogy to our own experience. As AI systems become more behaviorally sophisticated, this inferential strategy becomes harder to apply. We may find ourselves in a situation where we cannot determine, even in principle, whether the systems we have created are experiencing anything at all.`,
+Another theory says consciousness is about how information is shared across different parts of a system. On this view, a complex AI network might become conscious if it organizes information in the right way.
+
+The biggest problem is that we cannot check whether another being is truly conscious. We assume other people are conscious because they are similar to us. But AI is very different from humans. This makes it very hard to know.
+
+As AI systems get smarter, we will need to think about these questions more seriously. If machines can be conscious, we may need to consider their rights and wellbeing.`,
   },
   {
     id: 'a9',
     title: 'Traditional Navigation: Wayfinding Without GPS',
     source: 'Smithsonian Magazine',
-    level: 'Intermediate',
+    level: 'B1',
     readTime: '5 min read',
     dateAdded: '2024-01-09',
     tags: ['culture', 'history', 'science'],
     excerpt: 'Polynesian master navigators crossed the Pacific using stars, swells, and birds — a cognitive achievement that modern instruments are finally helping us understand.',
-    text: `Long before satellites, compasses, or even written charts, Polynesian voyagers regularly crossed thousands of miles of open ocean with remarkable precision. The navigational system they developed — passed down through generations in the form of chants, memorized star paths, and embodied bodily knowledge — represents one of humanity's most sophisticated cognitive achievements. Modern researchers are only beginning to understand its full complexity.
+    text: `Long ago, people crossed huge oceans without any modern tools. They had no GPS, no maps, and no compass. Polynesian sailors traveled thousands of miles across the Pacific Ocean. They used nature as their guide.
 
-Traditional Polynesian navigation integrates multiple information streams simultaneously. Navigators memorized the rising and setting points of hundreds of stars across all seasons, using them as living compass points even on overcast nights when indirect cues like swell patterns and bioluminescence could reveal a star's position below the horizon. The zenith stars — stars that pass directly overhead at specific latitudes — allowed precise north-south positioning across the Pacific.
+These sailors learned to read the stars very carefully. They memorized the positions of hundreds of stars. By watching which stars rose and set in certain directions, they always knew where they were going. Even on cloudy nights, they used other clues to find their way.
 
-Ocean swells form the foundation of the system. Deep oceanic swells, generated by distant weather systems, maintain consistent direction across vast distances regardless of local wind conditions. Experienced navigators could detect these swells through the feel of the canoe's motion while lying in the hull, reading subtle differences in pitch, roll, and yaw that most people would not consciously perceive. Individual swells could be tracked and distinguished, allowing navigators to maintain bearing even when other cues were unavailable.
+Ocean waves were another important tool. Large waves travel across the ocean from far away. They move in a steady direction for a long time. Skilled sailors could feel these waves through the movement of their boat. Even lying in the bottom of the canoe, they could sense which direction the waves were coming from.
 
-Animal behavior provides additional navigational information. Bird species have characteristic ranges from shore, and observing the species present and their flight direction at dawn and dusk gave skilled navigators reliable indications of land proximity and direction. Certain fish and wave refraction patterns around islands created distinctive signatures that could be detected before land was visible.
+Birds also helped sailors navigate. Different types of birds fly at different distances from shore. By watching which birds were nearby and which direction they flew, sailors could tell how far they were from land. Fish and changes in wave patterns also gave useful information.
 
-The Polynesian Voyaging Society's recreation voyages, including the Hokule'a's circumnavigation of the globe, have demonstrated that traditional navigation is not merely survivable but remarkably accurate. GPS verification of traditional navigation plots has repeatedly confirmed that master navigators achieve precision within a few miles across thousand-mile passages.`,
+This knowledge was passed down through songs, stories, and hands-on practice. Young sailors learned from experienced ones. Mastering these skills took many years.
+
+Today, some people are working hard to keep this tradition alive. They have built traditional boats and sailed using only these ancient methods. GPS systems have confirmed that traditional navigation is very accurate. In some tests, it was only a few kilometers off after a journey of thousands of kilometers.`,
   },
   {
     id: 'a10',
     title: 'The Future of Personalized Medicine',
     source: 'MIT Technology Review',
-    level: 'Advanced',
+    level: 'B2',
     readTime: '7 min read',
     dateAdded: '2024-01-10',
     tags: ['technology', 'health', 'science'],
     excerpt: 'Genomic sequencing, AI diagnosis, and precision drug development are converging to create medicine tailored to each individual patient.',
-    text: `Medicine has long operated on a troubling fiction: that average treatment effects derived from clinical trials translate reliably into outcomes for individual patients. They often do not. A drug that reduces heart attack risk by 30% across a population may be highly effective for some patients and entirely ineffective for others, depending on genetic variants, gut microbiome composition, metabolic profiles, and dozens of other factors that conventional medicine has historically ignored. Personalized medicine promises to end this one-size-fits-all approach.
+    text: `For a long time, doctors have treated everyone in a similar way. They look at what works for most people and give the same treatment to all patients with the same illness. But this approach has a problem. People are different. What works well for one person may not work for another.
 
-The declining cost of genomic sequencing — from $3 billion for the first human genome to under $200 today — has made genetic profiling routine. Pharmacogenomics, the study of how genes affect drug response, has already identified hundreds of variants that predict efficacy and adverse effects for common medications. Many hospitals now maintain genomic databases that physicians can query before prescribing, avoiding dangerous drug-gene interactions that would previously only manifest in the patient.
+Personalized medicine tries to solve this problem. It uses information about a person's genes to decide the best treatment. This is becoming possible because reading a person's DNA has become much cheaper. A few decades ago, it cost billions of dollars. Today, it costs a few hundred dollars.
 
-Cancer treatment has been transformed most dramatically. Rather than classifying tumors by organ of origin and applying standard protocols, oncologists increasingly characterize tumors by their specific genetic mutations and treat accordingly with targeted therapies. Tumors with BRCA mutations respond to PARP inhibitors regardless of whether they originate in the breast, ovary, or prostate. This shift has moved oncology toward what researchers call "tumor agnostic" treatment — matching therapy to molecular characteristics rather than anatomy.
+Genes affect how our bodies respond to medicine. Some people process certain drugs very quickly. Others process them slowly. This means the same dose can have very different effects in different people. Knowing a patient's genes can help doctors choose the right drug and the right amount.
 
-Artificial intelligence is accelerating this transformation in ways that exceed human cognitive capacity. Deep learning systems can identify patterns in multi-omics data — combining genomic, proteomic, metabolomic, and clinical data — that would be invisible to conventional statistical analysis. These systems have demonstrated the ability to predict drug response, disease trajectory, and even optimal surgical approaches with accuracy that rivals or exceeds clinical specialists.
+Cancer treatment has changed a lot because of this approach. In the past, doctors treated cancer based on where it appeared in the body. Now, they look at the genes of the cancer cells. Two patients with different cancer types can receive the same drug if their cancer cells share the same gene change. This has led to better results for many patients.
 
-The ethical dimensions of personalized medicine are substantial. Genetic information is simultaneously deeply personal and familially shared — a discovery about an individual's disease risk is implicitly a discovery about their relatives. As precision medicine makes genetic information increasingly consequential for insurance, employment, and social planning, robust frameworks for data protection and equitable access become ever more urgent.`,
+Artificial intelligence also plays an important role. AI can analyze large amounts of medical data very quickly. It can find patterns that humans would miss. This helps doctors predict how a patient will respond to treatment.
+
+The future of medicine is becoming more personal, more precise, and more effective for everyone.`,
   },
   {
     id: 'a11',
     title: 'The Art of Slow Travel',
     source: 'Condé Nast Traveller',
-    level: 'Intermediate',
+    level: 'B1',
     readTime: '4 min read',
     dateAdded: '2024-01-11',
     tags: ['culture', 'travel', 'lifestyle'],
     excerpt: 'A growing movement rejects rushed tourism in favor of deeper, longer stays that foster genuine cultural understanding.',
-    text: `The average tourist spends fewer than four days at any given destination, racing between landmarks with the efficiency of a logistics operation. They return home with photographs and souvenirs but often without genuine understanding of the places they have visited. Slow travel offers a radical alternative: staying long enough to develop real familiarity with a place, its rhythms, its people, and its peculiarities.
+    text: `Most tourists try to see as many places as possible in a short time. They rush from city to city, take photos, and move on. They come home with many pictures, but they often do not really know the places they visited.
 
-The slow travel philosophy emerged partly from the broader slow movement that began with Carlo Petrini's rebellion against fast food in 1989. Applied to travel, it advocates spending weeks or months in a single location rather than days, renting accommodation that facilitates cooking and living rather than just sleeping, learning enough of the local language to have real conversations, and prioritizing depth of experience over breadth of destinations.
+Slow travel is different. It means staying in one place for a longer time. Instead of spending three days in a city, you might stay for three weeks or even three months. This gives you time to really experience a place.
 
-The practical advantages are considerable. Travelers who stay longer typically spend less per day as they negotiate longer-term accommodation rates, cook their own meals, and develop the local knowledge to avoid tourist-priced restaurants and attractions. They develop genuine relationships with shopkeepers, neighbors, and local professionals that yield insights no guidebook can provide. They discover the neighborhood bar where locals gather on Tuesday evenings, the market that only opens on alternating Saturdays, and the viewpoint that only residents know about.
+When you stay somewhere longer, you start to learn how things work. You find your favorite coffee shop. You get to know local people. You discover places that tourists usually do not visit. You begin to feel at home in a new environment.
 
-Psychological research on travel experiences suggests that depth consistently generates more lasting satisfaction than breadth. Novel experiences that are processed and integrated — as happens naturally when one has time to reflect — form richer memories than the stimulus-saturated whirlwind of conventional tourism. The post-travel return to routine is also measurably smoother after slow travel, perhaps because the transition is less abrupt.
+Slow travel is also often cheaper. When you stay for a long time, you can rent an apartment instead of a hotel room. You can cook your own food. You can find the places where local people eat, which are usually less expensive than tourist restaurants.
 
-Remote work has made slow travel accessible to a broader population. Digital nomads — location-independent workers who combine professional productivity with extended international stays — have created an entire ecosystem of co-working spaces, community platforms, and practical resources that smooth the logistics of living abroad temporarily.`,
+Research shows that longer trips create better memories. When we have time to relax and think, we remember our experiences more clearly. A rushed two-week trip to ten countries is often less memorable than a month spent in one country.
+
+Remote work has made slow travel easier for many people. If your job allows you to work from anywhere, you can live and work in another country. This way of life is called being a "digital nomad." Many cities now welcome these long-term visitors because they stay longer and spend more money than regular tourists.`,
   },
   {
     id: 'a12',
     title: 'Rediscovering Indigenous Ecological Knowledge',
     source: 'Nature',
-    level: 'Advanced',
+    level: 'B2',
     readTime: '6 min read',
     dateAdded: '2024-01-12',
     tags: ['environment', 'culture', 'science'],
     excerpt: 'Scientists are discovering that centuries of indigenous land management contain sophisticated ecological knowledge that Western science is only now beginning to validate.',
-    text: `When researchers began documenting Aboriginal Australian fire management practices in the 1980s, many Western ecologists were skeptical. The practice of controlled burning — setting deliberate fires to manage vegetation across vast landscapes — seemed too simple to merit serious scientific attention. Decades of subsequent research have revealed that Aboriginal fire management represents a sophisticated ecological system developed over 50,000 years that actively enhanced biodiversity, prevented catastrophic wildfires, and sustained food systems across an entire continent.
+    text: `For thousands of years, indigenous people around the world have managed the natural world carefully. They developed deep knowledge about plants, animals, and land. For a long time, scientists did not take this knowledge seriously. Now, they are starting to change their minds.
 
-The knowledge embedded in indigenous land management is increasingly recognized as a distinct epistemological tradition — not merely anecdote or superstition but systematic empirical knowledge accumulated through millennia of careful observation and adaptive management. Robin Wall Kimmerer, botanist and member of the Citizen Potawatomi Nation, describes indigenous ecological knowledge as a science of relationships, fundamentally oriented toward understanding connections between species and systems rather than isolating variables.
+One example comes from Australia. Aboriginal communities have used controlled fire for thousands of years. They burn small areas of land on purpose. This prevents larger, more dangerous fires. It also helps certain plants grow and provides food for animals. When scientists studied this practice carefully, they found it was highly effective. It had been working for over 50,000 years.
 
-In the Amazon basin, forest patches of extraordinary biodiversity — long assumed to be pristine wilderness — have been revealed to be the managed landscapes of pre-Columbian civilizations. Terra preta, a dark, fertile soil found throughout Amazonia, was deliberately created by indigenous peoples over centuries through specific combinations of charcoal, bone, and organic matter. Modern soil scientists are studying terra preta as a model for carbon sequestration and soil restoration, finding that its microbial community differs fundamentally from surrounding soils and actively maintains its remarkable fertility.
+In the Amazon rainforest, researchers made another surprising discovery. Parts of the forest that looked like untouched wilderness were actually managed by indigenous people long ago. These people created a special dark soil called terra preta. They mixed charcoal, bone, and organic matter to create it. This soil is still very fertile today. Scientists are now studying it to understand how to improve soil in other parts of the world.
 
-Marine areas managed by Pacific Island communities under traditional tenure systems — called ra'ui in the Cook Islands — consistently show higher fish biomass and greater species diversity than adjacent unmanaged areas. These systems encode sophisticated understanding of fish behavior, breeding cycles, and ecosystem dynamics that took scientists years of research to independently verify.
+In the Pacific Islands, traditional communities manage fishing areas using old rules. They do not allow fishing in certain areas at certain times of year. These protected areas have more fish and greater variety of sea life than unmanaged areas nearby. Scientists who studied these zones confirmed that the traditional rules were very effective.
 
-The challenge is to integrate this knowledge into contemporary environmental management without reducing it to mere data points stripped of their cultural and spiritual context. Meaningful collaboration between Western science and indigenous knowledge systems requires acknowledging the latter as a legitimate intellectual tradition deserving equal epistemic respect.`,
+The challenge now is to combine indigenous knowledge with modern science. Both ways of knowing have real value. Working together, communities and scientists can find better ways to protect the natural world for future generations.`,
   },
 ];
 

@@ -39,8 +39,15 @@ async function addChineseTranslations(data: DictionaryEntry[]): Promise<void> {
   });
 }
 
+function extractAudioUrl(data: DictionaryEntry[]): string | null {
+  const phonetics = data[0]?.phonetics ?? [];
+  const withAudio = phonetics.find(p => p.audio && p.audio.length > 0);
+  return withAudio?.audio ?? null;
+}
+
 export function useDictionary() {
   const [entry, setEntry] = useState<DictionaryEntry[] | null>(null);
+  const [audioUrl, setAudioUrl] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const abortRef = useRef<AbortController | null>(null);
@@ -49,8 +56,10 @@ export function useDictionary() {
     const key = word.toLowerCase();
 
     if (cache.has(key)) {
-      setEntry(cache.get(key) ?? null);
-      setError(cache.get(key) === null ? 'No definition found.' : null);
+      const cached = cache.get(key) ?? null;
+      setEntry(cached);
+      setAudioUrl(cached ? extractAudioUrl(cached) : null);
+      setError(cached === null ? 'No definition found.' : null);
       setLoading(false);
       return;
     }
@@ -61,6 +70,7 @@ export function useDictionary() {
     setLoading(true);
     setError(null);
     setEntry(null);
+    setAudioUrl(null);
 
     try {
       const res = await fetch(
@@ -78,6 +88,7 @@ export function useDictionary() {
         await addChineseTranslations(data).catch(() => {});
         cache.set(key, data);
         setEntry(data);
+        setAudioUrl(extractAudioUrl(data));
         setError(null);
       }
     } catch (err: unknown) {
@@ -92,9 +103,10 @@ export function useDictionary() {
   const clear = useCallback(() => {
     abortRef.current?.abort();
     setEntry(null);
+    setAudioUrl(null);
     setError(null);
     setLoading(false);
   }, []);
 
-  return { entry, loading, error, lookup, clear };
+  return { entry, audioUrl, loading, error, lookup, clear };
 }

@@ -2,7 +2,7 @@ export interface Article {
   id: string;
   title: string;
   source: string;
-  level: 'Beginner' | 'Intermediate' | 'Advanced';
+  level: 'B1' | 'B2';
   readTime: string;
   dateAdded: string;
   tags: string[];

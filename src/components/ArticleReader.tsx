@@ -24,7 +24,7 @@ export function ArticleReader({
   onRemoveFlashcard,
 }: ArticleReaderProps) {
   const [popup, setPopup] = useState<WordPopupData | null>(null);
-  const { entry, loading, error, lookup, clear } = useDictionary();
+  const { entry, audioUrl, loading, error, lookup, clear } = useDictionary();
 
   const handleWordClick = useCallback(
     (word: string, e: React.MouseEvent) => {
@@ -86,7 +86,7 @@ export function ArticleReader({
         <div className="flex items-center gap-2 mb-3 flex-wrap">
           <span
             className={`text-xs font-semibold px-2.5 py-1 rounded-full ${
-              article.level === 'Advanced'
+              article.level === 'B2'
                 ? 'bg-purple-100 text-purple-700'
                 : 'bg-blue-100 text-blue-700'
             }`}
@@ -131,6 +131,7 @@ export function ArticleReader({
           x={popup.x}
           y={popup.y}
           entry={entry}
+          audioUrl={audioUrl}
           loading={loading}
           error={error}
           isInFlashcards={isInFlashcards(popup.word)}
