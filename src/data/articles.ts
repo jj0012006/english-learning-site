@@ -269,15 +269,25 @@ function seededRandom(seed: number): () => number {
 }
 
 export function getDailyArticles(): Article[] {
-  const today = new Date();
-  const seed = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
+  return getArticlesForDate(new Date());
+}
+
+export function getArticlesForDate(date: Date): Article[] {
+  const seed = date.getFullYear() * 10000 + (date.getMonth() + 1) * 100 + date.getDate();
   const rand = seededRandom(seed);
 
   const indices = new Set<number>();
   while (indices.size < 3) {
-    const idx = Math.floor(rand() * articles.length);
-    indices.add(idx);
+    indices.add(Math.floor(rand() * articles.length));
   }
 
   return Array.from(indices).map(i => articles[i]);
+}
+
+export function getRecentDates(count = 7): Date[] {
+  return Array.from({ length: count }, (_, i) => {
+    const d = new Date();
+    d.setDate(d.getDate() - i);
+    return d;
+  });
 }

@@ -1,20 +1,65 @@
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { getArticlesForDate, getRecentDates } from '../data/articles';
 
 interface SidebarProps {
   flashcardCount: number;
   isOpen: boolean;
   onClose: () => void;
+  selectedArticleId: string;
+  selectedDate: Date;
+  onSelectArticle: (articleId: string, date: Date) => void;
 }
 
-export function Sidebar({ flashcardCount, isOpen, onClose }: SidebarProps) {
+function dateKey(date: Date) {
+  return `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
+}
+
+function isSameDay(a: Date, b: Date) {
+  return a.getFullYear() === b.getFullYear() &&
+    a.getMonth() === b.getMonth() &&
+    a.getDate() === b.getDate();
+}
+
+function formatDateLabel(date: Date): string {
+  const today = new Date();
+  const yesterday = new Date();
+  yesterday.setDate(yesterday.getDate() - 1);
+  const monthDay = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  if (isSameDay(date, today)) return `${monthDay} · Today`;
+  if (isSameDay(date, yesterday)) return `${monthDay} · Yesterday`;
+  return monthDay;
+}
+
+export function Sidebar({
+  flashcardCount,
+  isOpen,
+  onClose,
+  selectedArticleId,
+  selectedDate,
+  onSelectArticle,
+}: SidebarProps) {
+  const recentDates = getRecentDates(7);
+
+  const [expandedDates, setExpandedDates] = useState<Set<string>>(() => {
+    return new Set([dateKey(new Date())]);
+  });
+
+  function toggleDate(date: Date) {
+    const key = dateKey(date);
+    setExpandedDates(prev => {
+      const next = new Set(prev);
+      if (next.has(key)) next.delete(key);
+      else next.add(key);
+      return next;
+    });
+  }
+
   return (
     <>
       {/* Mobile backdrop */}
       {isOpen && (
-        <div
-          className="md:hidden fixed inset-0 bg-black/50 z-40"
-          onClick={onClose}
-        />
+        <div className="md:hidden fixed inset-0 bg-black/50 z-40" onClick={onClose} />
       )}
 
       <aside
@@ -37,7 +82,7 @@ export function Sidebar({ flashcardCount, isOpen, onClose }: SidebarProps) {
         </button>
 
         {/* Logo */}
-        <div className="px-6 py-6 border-b border-gray-800">
+        <div className="px-6 py-5 border-b border-gray-800">
           <div className="flex items-center gap-2">
             <span className="text-2xl">📖</span>
             <div>
@@ -47,24 +92,63 @@ export function Sidebar({ flashcardCount, isOpen, onClose }: SidebarProps) {
           </div>
         </div>
 
-        {/* Nav */}
-        <nav className="flex-1 px-3 py-4 space-y-1">
-          <NavLink
-            to="/"
-            end
-            onClick={onClose}
-            className={({ isActive }) =>
-              `flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
-                isActive
-                  ? 'bg-indigo-600 text-white'
-                  : 'text-gray-400 hover:text-white hover:bg-gray-800'
-              }`
-            }
-          >
-            <span className="text-base">📰</span>
-            Daily Articles
-          </NavLink>
+        {/* Date accordion list */}
+        <nav className="flex-1 overflow-y-auto py-2">
+          {recentDates.map(date => {
+            const key = dateKey(date);
+            const isExpanded = expandedDates.has(key);
+            const isSelectedDate = isSameDay(date, selectedDate);
+            const articlesForDate = getArticlesForDate(date);
 
+            return (
+              <div key={key}>
+                {/* Date header button */}
+                <button
+                  onClick={() => toggleDate(date)}
+                  className={`w-full flex items-center justify-between px-4 py-2.5 text-sm transition-colors
+                    ${isSelectedDate ? 'text-indigo-300' : 'text-gray-400 hover:text-white'}`}
+                >
+                  <span className="font-medium">{formatDateLabel(date)}</span>
+                  <span className="text-xs opacity-60">{isExpanded ? '▾' : '▸'}</span>
+                </button>
+
+                {/* Article list */}
+                {isExpanded && (
+                  <div className="pb-1">
+                    {articlesForDate.map(article => {
+                      const isSelected = article.id === selectedArticleId && isSelectedDate;
+                      return (
+                        <button
+                          key={article.id}
+                          onClick={() => onSelectArticle(article.id, date)}
+                          className={`w-full text-left px-3 py-2 flex items-start gap-2 transition-colors
+                            ${isSelected
+                              ? 'bg-indigo-600 text-white'
+                              : 'text-gray-400 hover:text-white hover:bg-gray-800'
+                            }`}
+                        >
+                          <span className={`flex-shrink-0 mt-0.5 text-xs px-1.5 py-0.5 rounded font-semibold
+                            ${isSelected
+                              ? 'bg-indigo-500 text-indigo-100'
+                              : 'bg-gray-700 text-gray-400'
+                            }`}>
+                            {article.level}
+                          </span>
+                          <span className="text-xs leading-relaxed line-clamp-2">
+                            {article.title}
+                          </span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </nav>
+
+        {/* Flashcards link */}
+        <div className="border-t border-gray-800 p-3">
           <NavLink
             to="/flashcards"
             onClick={onClose}
@@ -84,13 +168,6 @@ export function Sidebar({ flashcardCount, isOpen, onClose }: SidebarProps) {
               </span>
             )}
           </NavLink>
-        </nav>
-
-        {/* Footer */}
-        <div className="px-6 py-4 border-t border-gray-800">
-          <p className="text-gray-600 text-xs leading-relaxed">
-            Click any word while reading to look it up and add to flashcards.
-          </p>
         </div>
       </aside>
     </>

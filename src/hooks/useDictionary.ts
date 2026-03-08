@@ -10,16 +10,17 @@ async function translateToZh(text: string): Promise<string | null> {
 
   try {
     const res = await fetch(
-      `https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=en|zh`
+      `https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=zh-CN&dt=t&q=${encodeURIComponent(text)}`
     );
     if (!res.ok) {
       zhCache.set(cacheKey, null);
       return null;
     }
     const data = await res.json();
-    const translated: string | null = data.responseData?.translatedText ?? null;
-    zhCache.set(cacheKey, translated);
-    return translated;
+    // Response: [[["translated","original",...],...],...]]
+    const translated: string = (data[0] as string[][]).map(item => item[0]).filter(Boolean).join('');
+    zhCache.set(cacheKey, translated || null);
+    return translated || null;
   } catch {
     zhCache.set(cacheKey, null);
     return null;
