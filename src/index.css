@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background-color: #f9f7f4;
+    color: #1a1a1a;
+  }
+}
+
+@layer components {
+  .word-token {
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background-color 0.15s ease;
+    display: inline;
+  }
+
+  .word-token:hover {
+    background-color: rgba(99, 102, 241, 0.12);
+  }
+
+  .word-token.in-flashcard {
+    border-bottom: 2px solid rgba(99, 102, 241, 0.6);
+  }
+
+  .word-token.in-flashcard:hover {
+    background-color: rgba(99, 102, 241, 0.15);
+  }
+}
