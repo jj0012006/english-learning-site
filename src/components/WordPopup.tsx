@@ -27,9 +27,10 @@ export function WordPopup({
   onClose,
 }: WordPopupProps) {
   const ref = useRef<HTMLDivElement>(null);
+  const isMobile = window.innerWidth < 768;
 
   useEffect(() => {
-    const handleClick = (e: MouseEvent) => {
+    const handleOutside = (e: MouseEvent | TouchEvent) => {
       if (ref.current && !ref.current.contains(e.target as Node)) {
         onClose();
       }
@@ -37,26 +38,32 @@ export function WordPopup({
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
     };
-    document.addEventListener('mousedown', handleClick);
+    document.addEventListener('mousedown', handleOutside);
+    document.addEventListener('touchstart', handleOutside);
     document.addEventListener('keydown', handleKey);
     return () => {
-      document.removeEventListener('mousedown', handleClick);
+      document.removeEventListener('mousedown', handleOutside);
+      document.removeEventListener('touchstart', handleOutside);
       document.removeEventListener('keydown', handleKey);
     };
   }, [onClose]);
 
-  // Position popup: try to keep it within viewport
-  const POPUP_W = 320;
-  const POPUP_H = 280;
-  const vw = window.innerWidth;
-  const vh = window.innerHeight;
+  // Desktop positioning: keep popup within viewport
+  let left = 0;
+  let top = 0;
+  if (!isMobile) {
+    const POPUP_W = 320;
+    const POPUP_H = 300;
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
 
-  let left = x + 8;
-  let top = y + 8;
-  if (left + POPUP_W > vw - 8) left = x - POPUP_W - 8;
-  if (top + POPUP_H > vh - 8) top = y - POPUP_H - 8;
-  if (left < 8) left = 8;
-  if (top < 8) top = 8;
+    left = x + 8;
+    top = y + 8;
+    if (left + POPUP_W > vw - 8) left = x - POPUP_W - 8;
+    if (top + POPUP_H > vh - 8) top = y - POPUP_H - 8;
+    if (left < 8) left = 8;
+    if (top < 8) top = 8;
+  }
 
   const firstEntry = entry?.[0];
   const phonetic =
@@ -82,8 +89,12 @@ export function WordPopup({
   return (
     <div
       ref={ref}
-      className="fixed z-50 w-80 bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden"
-      style={{ left, top }}
+      className={
+        isMobile
+          ? 'fixed bottom-0 left-0 right-0 z-50 bg-white rounded-t-2xl shadow-2xl border border-gray-100 overflow-hidden'
+          : 'fixed z-50 w-80 bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden'
+      }
+      style={isMobile ? {} : { left, top }}
     >
       {/* Header */}
       <div className="bg-indigo-600 px-4 py-3 flex items-start justify-between">
@@ -122,6 +133,11 @@ export function WordPopup({
             <p className="text-gray-800 text-sm leading-relaxed">
               {firstDef?.definition}
             </p>
+            {firstDef?.definitionZh && (
+              <p className="text-gray-400 text-xs leading-relaxed">
+                {firstDef.definitionZh}
+              </p>
+            )}
             {firstDef?.example && (
               <p className="text-gray-500 text-sm italic border-l-2 border-indigo-200 pl-3">
                 "{firstDef.example}"

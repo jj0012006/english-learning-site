@@ -2,6 +2,42 @@ import { useState, useCallback, useRef } from 'react';
 import type { DictionaryEntry } from '../types';
 
 const cache = new Map<string, DictionaryEntry[] | null>();
+const zhCache = new Map<string, string | null>();
+
+async function translateToZh(text: string): Promise<string | null> {
+  const cacheKey = text.slice(0, 500);
+  if (zhCache.has(cacheKey)) return zhCache.get(cacheKey) ?? null;
+
+  try {
+    const res = await fetch(
+      `https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=en|zh`
+    );
+    if (!res.ok) {
+      zhCache.set(cacheKey, null);
+      return null;
+    }
+    const data = await res.json();
+    const translated: string | null = data.responseData?.translatedText ?? null;
+    zhCache.set(cacheKey, translated);
+    return translated;
+  } catch {
+    zhCache.set(cacheKey, null);
+    return null;
+  }
+}
+
+async function addChineseTranslations(data: DictionaryEntry[]): Promise<void> {
+  const firstMeaning = data[0]?.meanings?.[0];
+  if (!firstMeaning?.definitions?.length) return;
+
+  const defsToTranslate = firstMeaning.definitions.slice(0, 3);
+  const translations = await Promise.all(
+    defsToTranslate.map(def => translateToZh(def.definition))
+  );
+  defsToTranslate.forEach((def, i) => {
+    if (translations[i]) def.definitionZh = translations[i] ?? undefined;
+  });
+}
 
 export function useDictionary() {
   const [entry, setEntry] = useState<DictionaryEntry[] | null>(null);
@@ -38,6 +74,8 @@ export function useDictionary() {
         setEntry(null);
       } else {
         const data: DictionaryEntry[] = await res.json();
+        // Translate definitions to Chinese (silent fail)
+        await addChineseTranslations(data).catch(() => {});
         cache.set(key, data);
         setEntry(data);
         setError(null);
